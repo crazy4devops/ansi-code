@@ -1,0 +1,2 @@
+[dev-01]
+172.31.45.224 ansible_ssh_user=cloud_user ansible_ssh_port=22 ansible_ssh_pass="Venkat@123" ansible_sudo_pass="Venkat@123"
