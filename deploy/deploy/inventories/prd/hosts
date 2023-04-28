@@ -1,0 +1,8 @@
+[QA-03]
+10.1.2.27 ansible_ssh_user=drcloudadmin ansible_ssh_port=59372
+
+[uat]
+your_server_ip ansible_ssh_user=username
+
+[prod]
+your_server_ip ansible_ssh_user=username

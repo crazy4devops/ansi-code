@@ -1,0 +1,20 @@
+---
+- hosts: dev-01
+  become: yes
+  become_user: root
+  vars:
+    dest: "/var/www/site/"
+    ansistrano_deploy_via: "git"
+    ansistrano_git_repo: https://github.com/alemorvan/demo-ansible.git
+    ansistrano_deploy_to: "{{ dest }}"
+    ansistrano_keep_releases: 3
+    # ansistrano_shared_paths:
+    #   - "img"
+    #   - "css"
+    # ansistrano_shared_files:
+    #   - "log"
+    # ansistrano_git_repo_tree: 'html'
+    # ansistrano_git_branch: 'releases/v1.1.0'
+
+  roles:
+     - { role: ansistrano.deploy }
