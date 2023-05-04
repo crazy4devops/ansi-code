@@ -35,4 +35,3 @@
 
 - include_tasks: anon-stats.yml
 
-- include_tasks: funding.yml
