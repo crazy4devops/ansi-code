@@ -3,9 +3,14 @@
   become: yes
   become_user: root
   vars:
+    githubuser: ""
+    githubpassword: ""
     dest: "/var/www/site/"
     ansistrano_deploy_via: "git"
-    ansistrano_git_repo: https://github.com/alemorvan/demo-ansible.git
+    ansistrano_git_repo:"https://{{ githubuser | urlencode }}:{{ githubpassword | urlencode }}@github.com/simplephpapp.git"
+    #"https://{{ githubuser | urlencode }}:{{ githubpassword | urlencode }}@github.com/privrepo.git"
+    #https://github.com/crazy4devops/simplephpapp.git
+    #nsible-playbook -i hosts github.yml -e "githubuser=arbabname" -e "githubpassword=xxxxxxx"
     ansistrano_deploy_to: "{{ dest }}"
     ansistrano_keep_releases: 3
     # ansistrano_shared_paths:
