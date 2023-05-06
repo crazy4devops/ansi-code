@@ -7,10 +7,7 @@
     githubpassword: ""
     dest: "/var/www/site/"
     ansistrano_deploy_via: "git"
-    ansistrano_git_repo: "https://{{ githubuser | urlencode }}:{{ githubpassword | urlencode }}@github.com/crazy4devops/simplephpapp.git"
-    #"https://{{ githubuser | urlencode }}:{{ githubpassword | urlencode }}@github.com/privrepo.git"
-    #https://github.com/crazy4devops/simplephpapp.git
-    #nsible-playbook -i hosts github.yml -e "githubuser=crazy4devops" -e "githubpassword=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"
+    ansistrano_git_repo: "https://{{githubuser|urlencode()}}:{{githubpassword|urlencode()}}@github.com/crazy4devops/simplephpapp.git"
     ansistrano_deploy_to: "{{ dest }}"
     ansistrano_keep_releases: 3
     # ansistrano_shared_paths:
