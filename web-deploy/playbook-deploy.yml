@@ -3,8 +3,8 @@
   become: yes
   become_user: root
   vars:
-    githubuser: ""
-    githubtoken: ""
+    # githubuser: ""
+    # githubtoken: ""
     dest: "/var/www/site/"
     ansistrano_deploy_via: "git"
     ansistrano_git_repo: "https://{{ githubtoken | urlencode }}@github.com/crazy4devops/simplephpapp.git"
