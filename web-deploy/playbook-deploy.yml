@@ -10,7 +10,8 @@
     ansistrano_git_repo: "git@github.com:crazy4devops/simplephpapp.git"
     ansistrano_deploy_to: "{{ dest }}"
     ansistrano_keep_releases: 3
-    ansistrano_git_identity_key_path: "ssh-priv-keys/id_rsa_dev01"
+    # ansistrano_git_identity_key_path: "ssh-priv-keys/id_rsa_dev01"
+    ansistrano_git_identity_key_remote_path: "/home/cloud_user/.ssh/id_rsa"
     ansistrano_git_ssh_opts: "-o StrictHostKeyChecking=no"
     # ansistrano_shared_paths:
     #   - "img"
