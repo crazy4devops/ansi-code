@@ -7,7 +7,7 @@
     # githubtoken: ""
     dest: "/var/www/site/"
     ansistrano_deploy_via: "git"
-    ansistrano_git_repo: "https://{{ githubtoken | urlencode }}@github.com/crazy4devops/simplephpapp.git"
+    ansistrano_git_repo: "https://{{githubuser|urlencode()}}:{{githubtoken|urlencode()}}@github.com/crazy4devops/simplephpapp.git"
     ansistrano_deploy_to: "{{ dest }}"
     ansistrano_keep_releases: 3
     # ansistrano_shared_paths:
